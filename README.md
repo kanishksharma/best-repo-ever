@@ -2,7 +2,7 @@
 #   TID : TID018547
 #   Pre-Requisite : n/a
 #   Product Area: Reporting FinancialForce - Run Report
-#   Story: 	30686 - (I1.11) Create Routing
+# 
 #--------------------------------------------------------------------#
 describe "TID018547: Validate Routing Process", :type => :request do
 
@@ -30,7 +30,7 @@ describe "TID018547: Validate Routing Process", :type => :request do
 	it "Tests for Routing Process" do
 		_expected_body = 'DIMENSION 1 DIMENSION 2 DIMENSION 3 DIMENSION 4 HOMEVALUEP1 DUALVALUEP1 HOMEVALUEP2 DUALVALUEP2 ' + 
 				 'ROW 1 '+ 
-				 '0 0 0 1 100.00 200.00 0.00 0.00 ' +
+				
 				 '0 100.00 200.00 0.00 0.00 ' +
 				 '0 100.00 200.00 0.00 0.00 ' +
 				 '0 100.00 200.00 0.00 0.00 ' +
