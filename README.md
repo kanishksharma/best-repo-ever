@@ -4,7 +4,7 @@
 #   Product Area: Reporting FinancialForce - Run Report
 #   Story: 	30686 - (I1.11) Create Routing
 #--------------------------------------------------------------------#
-describe "TID018547: Validate Routing Process", :type => :request do
+describe " Validate Routing Process", :type => :request do
 
 	before(:all) do
 		gen_start_test "TID018547"
@@ -12,7 +12,7 @@ describe "TID018547: Validate Routing Process", :type => :request do
 		APEX.execute_script "ReportingBaseData.destroyData();"
 		APEX.execute_script "ReportingBaseData.createReportingDefinition002();" +
 							"insert ReportingHelper.newTransactionLineItemMock('0', '0', '0', '1', '001', 100.0, 200.0);" +
-							"insert ReportingHelper.newTransactionLineItemMock('2', '0', '0', '1', '002', 300.0, 400.0);"	
+							"insert ReportingHelper.newTransactionLineItemMock('2', '0', '0', '1', '002', 300.0, 300.0);"	
 		
 		_assign_permissions  = $assignpermissiontouser + " assignPermissionSetsToUser(new List<String>{'FinancialForceReportingConfiguration', 'Reporting_Mock_Access'},'standard1');"
 		APEX.execute_script _assign_permissions
@@ -34,7 +34,7 @@ describe "TID018547: Validate Routing Process", :type => :request do
 				 '0 100.00 200.00 0.00 0.00 ' +
 				 '0 100.00 200.00 0.00 0.00 ' +
 				 '0 100.00 200.00 0.00 0.00 ' +
-				 '2 0 0 1 0.00 0.00 300.00 400.00 ' +
+				 '2 0 0 1 .00 0.00 300.00 400.00 ' +
 				 '0 0.00 0.00 300.00 400.00 ' + 
 				 '0 0.00 0.00 300.00 400.00 ' + 
 				 '2 0.00 0.00 300.00 400.00'
